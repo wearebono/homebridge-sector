@@ -173,7 +173,7 @@ SectorSecuritySystemAccessory.prototype.getCurrentState = function(callback) {
     var self = this;
     self.log("getCurrentState() Getting current state");
 
-    if (self.polling) {
+    if (self.polling && currentState) {
         self.log("getCurrentState() Returning current state " + currentState);
         callback(null, currentState);
     } else {
